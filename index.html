@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Art Gallery</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">My Art Gallery</a>
+</nav>
+
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <img id="galleryImage" class="img-fluid mb-3" src="" alt="Gallery Image">
+      <p id="imageDescription"></p>
+    </div>
+  </div>
+</div>
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+<script>
+  $(document).ready(function() {
+    var imageIndex = 0;
+    var images = ["freeb2.jpg", "freeb4.jpg", "freeb6.jpg", "freeb8.jpg"];
+    var descriptions = ["description1.html", "description2.html", "description3.html", "description4.html"];
+
+    function loadNextImage() {
+      $("#galleryImage").attr("src", images[imageIndex]);
+      $("#imageDescription").load(descriptions[imageIndex]);
+      imageIndex = (imageIndex + 1) % images.length;
+    }
+
+    loadNextImage(); // Load first image immediately
+
+    // Load new image and description every 2 seconds
+    setInterval(function() {
+      loadNextImage();
+    }, 2000);
+  });
+</script>
+
+</body>
+</html>
