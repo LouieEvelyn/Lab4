@@ -6,13 +6,52 @@
   <title>My Sketch Gallery</title>
   <!-- Bootstrap CSS -->
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f8f9fa; /* Light gray background */
+      padding-top: 60px; /* To accommodate the fixed navbar */
+    }
 
+    .navbar-brand {
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    .navbar-text {
+      font-weight: bold;
+    }
+
+    .container {
+      background-color: #fff; /* White background */
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    #galleryImage {
+      max-width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    #imageDescription {
+      font-size: 1.1rem;
+      margin-top: 10px;
+    }
+</style>
+</head>
+  
+<body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a class="navbar-brand" href="https://louieevelyn.github.io/Lab4/">My Sketch Gallery</a>
 
-  <!-- Buttons -->
+  <!-- Toggler button for mobile -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Right side of the navbar -->
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
@@ -22,10 +61,7 @@
           <a class="nav-link active" aria-current="page" href="ArtGallery.html">Finished Art</a>
       </li>
     </ul>
-    
-    <span class="navbar-text">
-        Evelyn Louie
-    </span>
+    <span class="navbar-text ml-auto">Evelyn Louie</span>
   </div>
 </nav>
 
